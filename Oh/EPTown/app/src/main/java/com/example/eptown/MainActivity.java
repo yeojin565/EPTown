@@ -59,6 +59,16 @@ public class MainActivity extends AppCompatActivity {
             window.setStatusBarColor(Color.WHITE);
         }
 
+        Window window = getWindow();
+
+        // 네비게이션 바 배경색을 흰색으로 설정 (API 21 이상)
+        window.setNavigationBarColor(getResources().getColor(android.R.color.white));
+
+        // 아이콘 색상을 검정색으로 설정 (API 26 이상)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+        }
+
         // ViewPager2 설정
         viewPager = findViewById(R.id.BannerImg);
         bannerOrderText = findViewById(R.id.BannerText);

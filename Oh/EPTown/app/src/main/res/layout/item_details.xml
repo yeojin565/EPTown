@@ -62,11 +62,11 @@
         app:layout_constraintTop_toTopOf="@id/ItemDetailsBackIcon"
         app:layout_constraintTop_toBottomOf="@id/ItemDetailsFixBar" />
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="58dp"
-            android:fillViewport="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="58dp"
+        android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -463,7 +463,7 @@
                 app:layout_constraintTop_toBottomOf="@id/ItemDescription"
                 app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
+    </ScrollView>
 
     <FrameLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
