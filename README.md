@@ -1,6 +1,9 @@
 # 멍냐옹
 #부천대학교 컴퓨터소프트웨어과 23학번 멍냐옹팀
 
+# 에펫타운
+반려동물 플랫폼 앱
+
 
 폴더 설명
 ---
@@ -13,9 +16,9 @@ Repository Member
 ---
 이름 | GitHub
 -- | --
-오지현 | HaileySpace
-최연주 | duswndi1106@gmail.com
-정여진 | jyeojin565@gmail.com
+오지현 | JihyunArchive
+최연주 | duswnwnn
+정여진 | yeojin565
 
 <br/>
 
