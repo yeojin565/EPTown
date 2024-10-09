@@ -11,11 +11,11 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ItemDetails extends AppCompatActivity {
+public class ItemDetailsInquiry extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.item_details);
+        setContentView(R.layout.item_details_inquiry);
 
         // 상태바 및 네비게이션 바 배경을 흰색으로, 아이콘 색상을 검정으로 설정 (API 21 이상)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

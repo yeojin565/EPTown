@@ -42,8 +42,7 @@
                 android:textColor="@color/black"
                 android:maxLines="2"
                 android:ellipsize="end"
-                android:gravity="center"
-                android:includeFontPadding="false"/>
+                android:gravity="center" />
 
             <!-- 원가 + 원 -->
             <LinearLayout
@@ -60,8 +59,7 @@
                     android:text="4,900"
                     android:textColor="@color/black"
                     android:textFontWeight="900"
-                    android:textSize="13sp"
-                    android:includeFontPadding="false"/>
+                    android:textSize="13sp" />
 
                 <!-- 원 -->
                 <TextView
@@ -70,8 +68,7 @@
                     android:text="원"
                     android:textColor="@color/black"
                     android:textFontWeight="300"
-                    android:textSize="13sp"
-                    android:includeFontPadding="false"/>
+                    android:textSize="13sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -102,8 +99,7 @@
                 android:textColor="@color/black"
                 android:maxLines="2"
                 android:ellipsize="end"
-                android:gravity="center"
-                android:includeFontPadding="false"/>
+                android:gravity="center" />
 
             <!-- 할인 퍼센트 / 할인된 가격 -->
             <LinearLayout
@@ -120,8 +116,7 @@
                     android:textColor="#F10000"
                     android:textFontWeight="900"
                     android:textSize="13sp"
-                    android:layout_marginEnd="7dp"
-                    android:includeFontPadding="false" />
+                    android:layout_marginEnd="7dp" />
 
                 <!-- 할인된 가격 -->
                 <TextView
@@ -130,8 +125,7 @@
                     android:text="19,000"
                     android:textColor="@color/black"
                     android:textFontWeight="900"
-                    android:textSize="13sp"
-                    android:includeFontPadding="false" />
+                    android:textSize="13sp" />
 
                 <!-- 원 -->
                 <TextView
@@ -140,8 +134,7 @@
                     android:text="원"
                     android:textColor="@color/black"
                     android:textFontWeight="300"
-                    android:textSize="13sp"
-                    android:includeFontPadding="false"/>
+                    android:textSize="13sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -173,8 +166,7 @@
                 android:textColor="@color/black"
                 android:maxLines="2"
                 android:ellipsize="end"
-                android:gravity="center"
-                android:includeFontPadding="false"/>
+                android:gravity="center" />
 
             <!-- 원가 + 원 -->
             <LinearLayout
@@ -191,8 +183,7 @@
                     android:text="2,200"
                     android:textColor="@color/black"
                     android:textFontWeight="900"
-                    android:textSize="13sp"
-                    android:includeFontPadding="false"/>
+                    android:textSize="13sp" />
 
                 <!-- 원 -->
                 <TextView
@@ -201,8 +192,7 @@
                     android:text="원"
                     android:textColor="@color/black"
                     android:textFontWeight="300"
-                    android:textSize="13sp"
-                    android:includeFontPadding="false"/>
+                    android:textSize="13sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -234,8 +224,7 @@
                 android:textColor="@color/black"
                 android:maxLines="2"
                 android:ellipsize="end"
-                android:gravity="center"
-                android:includeFontPadding="false"/>
+                android:gravity="center" />
 
             <!-- 원가 + 원 -->
             <LinearLayout
@@ -252,8 +241,7 @@
                     android:text="3,900"
                     android:textColor="@color/black"
                     android:textFontWeight="900"
-                    android:textSize="13sp"
-                    android:includeFontPadding="false"/>
+                    android:textSize="13sp"/>
 
                 <!-- 원 -->
                 <TextView
@@ -262,8 +250,7 @@
                     android:text="원"
                     android:textColor="@color/black"
                     android:textFontWeight="300"
-                    android:textSize="13sp"
-                    android:includeFontPadding="false"/>
+                    android:textSize="13sp" />
             </LinearLayout>
         </LinearLayout>
     </GridLayout>

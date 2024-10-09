@@ -136,7 +136,7 @@
                 android:id="@+id/BannerText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="1dp"
+                android:layout_marginEnd="0dp"
                 android:fontFamily="@font/notosanskr_medium"
                 android:text="1 / 4"
                 android:textColor="#FFFFFF"
@@ -177,7 +177,8 @@
                         android:layout_height="wrap_content"
                         android:text="할인 혜택"
                         android:textSize="10sp"
-                        android:textColor="#242628" />
+                        android:textColor="#242628"
+                        android:layout_marginTop="5dp"/>
                 </LinearLayout>
 
                 <!-- 사료 -->
@@ -199,7 +200,8 @@
                         android:layout_height="wrap_content"
                         android:text="사료"
                         android:textSize="10sp"
-                        android:textColor="#242628" />
+                        android:textColor="#242628"
+                        android:layout_marginTop="5dp"/>
                 </LinearLayout>
 
                 <!-- 간식 -->
@@ -221,7 +223,8 @@
                         android:layout_height="wrap_content"
                         android:text="간식"
                         android:textSize="10sp"
-                        android:textColor="#242628" />
+                        android:textColor="#242628"
+                        android:layout_marginTop="5dp"/>
                 </LinearLayout>
 
                 <!-- 용품 -->
@@ -243,7 +246,8 @@
                         android:layout_height="wrap_content"
                         android:text="용품"
                         android:textSize="10sp"
-                        android:textColor="#242628" />
+                        android:textColor="#242628"
+                        android:layout_marginTop="5dp"/>
                 </LinearLayout>
 
                 <!-- 더보기 -->
@@ -264,7 +268,8 @@
                         android:layout_height="wrap_content"
                         android:text="더보기"
                         android:textSize="10sp"
-                        android:textColor="#242628" />
+                        android:textColor="#242628"
+                        android:layout_marginTop="5dp"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -274,7 +279,7 @@
                 android:id="@+id/UserRecommendedItems"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="33dp"
+                android:layout_marginTop="35dp"
                 android:layout_marginStart="20dp"
                 android:text="오지현님을 위한 추천 상품"
                 android:textSize="15sp"
@@ -411,8 +416,7 @@
             android:layout_marginStart="38dp"
             android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="@id/HomeRectangleBar"
-            app:layout_constraintTop_toBottomOf="@id/NowTapHomeIcon"
-            android:includeFontPadding="false" />
+            app:layout_constraintTop_toBottomOf="@id/NowTapHomeIcon" />
 
         <!-- 탭바 커뮤니티 배경 하얀색 사각형 -->
         <ImageView
@@ -448,8 +452,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="@id/CommunityRectangleBar"
-            app:layout_constraintTop_toBottomOf="@id/TapCommunityIcon"
-            android:includeFontPadding="false" />
+            app:layout_constraintTop_toBottomOf="@id/TapCommunityIcon" />
 
         <!-- 탭바 카테고리 배경 하얀색 사각형 -->
         <ImageView
@@ -485,8 +488,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="7dp"
             app:layout_constraintStart_toStartOf="@id/CategoryRectangleBar"
-            app:layout_constraintTop_toBottomOf="@id/TapCategoryIcon"
-            android:includeFontPadding="false" />
+            app:layout_constraintTop_toBottomOf="@id/TapCategoryIcon" />
 
         <!-- 탭바 병원 배경 하얀색 사각형 -->
         <ImageView
@@ -522,8 +524,7 @@
             android:layout_marginStart="33.5dp"
             android:layout_marginTop="3.5dp"
             app:layout_constraintStart_toStartOf="@id/HospitalRectangleBar"
-            app:layout_constraintTop_toBottomOf="@id/TapHostpitalIcon"
-            android:includeFontPadding="false" />
+            app:layout_constraintTop_toBottomOf="@id/TapHostpitalIcon" />
 
         <!-- 탭바 내 정보 배경 하얀색 사각형 -->
         <ImageView
@@ -559,9 +560,6 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="2.5dp"
             app:layout_constraintStart_toStartOf="@id/MypageRectangleBar"
-            app:layout_constraintTop_toBottomOf="@id/TapMypageIcon"
-            android:includeFontPadding="false" />
-
-
+            app:layout_constraintTop_toBottomOf="@id/TapMypageIcon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

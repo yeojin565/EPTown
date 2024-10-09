@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EPTown"
         tools:targetApi="31" >
+
+        <!-- 메인 화면 -->
         <activity
             android:name=".MainActivity"
             android:exported="true" >
@@ -22,9 +24,31 @@
             </intent-filter>
         </activity>
 
+        <!-- 로그인 -->
+        <activity
+            android:name=".Login"
+            android:exported="true" />
+
+        <!-- 상품 상세 / 상품 정보-->
         <activity
             android:name=".ItemDetails"
             android:exported="true" />
+
+        <!-- 상품 상세 / 리뷰 -->
+        <activity
+            android:name=".ItemDetailsReview"
+            android:exported="true" />
+
+        <!-- 상품 상세 / 문의 -->
+        <activity
+            android:name=".ItemDetailsInquiry"
+            android:exported="true" />
+
+        <!-- 상품 상세 / 쿠폰 -->
+        <activity
+            android:name=".ItemDetailsCoupon"
+            android:exported="true" />
+
     </application>
 
 </manifest>

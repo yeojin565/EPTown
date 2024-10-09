@@ -36,7 +36,7 @@
             <TextView
                 android:layout_width="118dp"
                 android:layout_height="38dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:text="캣만두 라이프 에센셜 치킨 142g"
                 android:textSize="10sp"
                 android:textColor="@color/black"
@@ -145,7 +145,7 @@
             <TextView
                 android:layout_width="118dp"
                 android:layout_height="38dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:text="이나바 캣 챠오 츄르 참치 버라이어트 14g * 40p"
                 android:textSize="10sp"
                 android:textColor="@color/black"
@@ -274,7 +274,7 @@
             <TextView
                 android:layout_width="118dp"
                 android:layout_height="38dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:text="[최저가 도전] 인트라젠 영양제 위장 &amp; 면역 50p"
                 android:textSize="10sp"
                 android:textColor="@color/black"
@@ -410,7 +410,7 @@
             <TextView
                 android:layout_width="118dp"
                 android:layout_height="38dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:text="[대용량] 촉촉트릿 for cat 초미니트릿 북어 120g"
                 android:textSize="10sp"
                 android:textColor="@color/black"
@@ -547,7 +547,7 @@
             <TextView
                 android:layout_width="118dp"
                 android:layout_height="38dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:text="알모네이쳐 캣 대서양참치 캔 70g"
                 android:textSize="10sp"
                 android:textColor="@color/black"
@@ -677,7 +677,7 @@
             <TextView
                 android:layout_width="118dp"
                 android:layout_height="38dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:text="하겐 캣잇 2.0 트릿퍼즐"
                 android:textSize="10sp"
                 android:textColor="@color/black"
@@ -786,7 +786,7 @@
             <TextView
                 android:layout_width="118dp"
                 android:layout_height="38dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:text="우다다맨숀 아크릴 식기 1구 오렌지"
                 android:textSize="10sp"
                 android:textColor="@color/black"
@@ -895,7 +895,7 @@
             <TextView
                 android:layout_width="118dp"
                 android:layout_height="38dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:text="로얄캐닌 캣 인도어 4kg 변냄새 감소"
                 android:textSize="10sp"
                 android:textColor="@color/black"
@@ -1025,7 +1025,7 @@
             <TextView
                 android:layout_width="118dp"
                 android:layout_height="38dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:text="그리니즈 캣 필라인 덴탈 트릿 닭고기맛 130g"
                 android:textSize="10sp"
                 android:textColor="@color/black"
