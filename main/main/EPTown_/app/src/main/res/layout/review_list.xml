@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 첫 번째 리뷰 -->
+    <!-- 리뷰 작성자 -->
+    <TextView
+        android:id="@+id/ReviewWriter1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="김청명"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:includeFontPadding="false" />
+
+    <!-- 리뷰 작성자 옆 구분바 -->
+    <ImageView
+        android:id="@+id/ReviewWriterDivide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_review_divide"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewWriter1"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 리뷰 별 svg -->
+    <ImageView
+        android:id="@+id/StarIcon1"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:src="@drawable/ic_star"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/ReviewWriterDivide1"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 별 옆 평점 텍스트 -->
+    <TextView
+        android:id="@+id/StarRatingText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.0"
+        android:textColor="#8A8A8E"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/StarIcon1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:includeFontPadding="false"/>
+
+    <!-- 리뷰 작성 날짜 -->
+    <TextView
+        android:id="@+id/ReviewCreatedText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2024.09.01"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:includeFontPadding="false"/>
+
+    <!-- 리뷰 이미지 -->
+    <ImageView
+        android:id="@+id/ReviewImage1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/image_review_1"
+        android:background="@drawable/rounded_image"
+        android:clipToOutline="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter1" />
+
+    <!-- 옵션 -->
+    <TextView
+        android:id="@+id/ReviewItemOption1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="옵션"
+        android:textColor="#585858"
+        android:textSize="12sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewImage1"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter1"
+        android:includeFontPadding="false" />
+
+    <!-- 옵션 옆 구분바 -->
+    <ImageView
+        android:id="@+id/ReviewItemOptionDivide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_review_divide"
+        android:layout_marginTop="19dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewItemOption1"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter1"/>
+
+    <!-- 리뷰 상품 옵션 -->
+    <TextView
+        android:id="@+id/ReviewItemOptionText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="참치맛"
+        android:textColor="#585858"
+        android:textSize="12sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewItemOptionDivide1"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter1"
+        android:includeFontPadding="false" />
+
+    <!-- 리뷰 글 -->
+    <TextView
+        android:id="@+id/ReviewText1"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:text="우리 냥냥이가 맛있게 잘 먹고 있는 상품입니다. 리뷰에서 본 것처럼 배송 빠르고 좋네요!ㅎㅎ "
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewImage1"
+        app:layout_constraintTop_toBottomOf="@id/ReviewItemOption1"
+        android:includeFontPadding="false"/>
+
+    <!-- 리뷰 구분바 -->
+    <ImageView
+        android:id="@+id/ItemDetailDeliveryDivideBar1"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ReviewImage1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 두 번째 리뷰 -->
+    <!-- 리뷰 작성자 -->
+    <TextView
+        android:id="@+id/ReviewWriter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이백천"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar1"
+        android:includeFontPadding="false" />
+
+    <!-- 리뷰 작성자 옆 구분바 -->
+    <ImageView
+        android:id="@+id/ReviewWriterDivide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_review_divide"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewWriter2"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar1"/>
+
+    <!-- 리뷰 별 svg -->
+    <ImageView
+        android:id="@+id/StarIcon2"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:src="@drawable/ic_star"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/ReviewWriterDivide2"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar1"/>
+
+    <!-- 별 옆 평점 텍스트 -->
+    <TextView
+        android:id="@+id/StarRatingText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.0"
+        android:textColor="#8A8A8E"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/StarIcon2"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar1"
+        android:includeFontPadding="false"/>
+
+    <!-- 리뷰 작성 날짜 -->
+    <TextView
+        android:id="@+id/ReviewCreatedText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2024.09.01"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:includeFontPadding="false"/>
+
+    <!-- 리뷰 이미지 -->
+    <ImageView
+        android:id="@+id/ReviewImage2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/image_review_2"
+        android:background="@drawable/rounded_image"
+        android:clipToOutline="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter2" />
+
+    <!-- 옵션 -->
+    <TextView
+        android:id="@+id/ReviewItemOption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="옵션"
+        android:textColor="#585858"
+        android:textSize="12sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewImage2"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter2"
+        android:includeFontPadding="false" />
+
+    <!-- 옵션 옆 구분바 -->
+    <ImageView
+        android:id="@+id/ReviewItemOptionDivide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_review_divide"
+        android:layout_marginTop="19dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewItemOption2"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter2"/>
+
+    <!-- 리뷰 상품 옵션 -->
+    <TextView
+        android:id="@+id/ReviewItemOptionText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="참치맛"
+        android:textColor="#585858"
+        android:textSize="12sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewItemOptionDivide2"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter2"
+        android:includeFontPadding="false" />
+
+    <!-- 리뷰 글 -->
+    <TextView
+        android:id="@+id/ReviewText2"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:text="전보다 양이 작아진 건 기분 탓이겠죠? 그래도 우리집 주인님이 맛있게 잘 먹고 있는 상품입니다. 배송 빨라서 좋았는데 포장 상태가 영... 별로여서 별 하나 깎았어요..! 다음에는 포장 잘해서 보내주세요ㅠㅠ! 다음에도 또 시킬게요!"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewImage2"
+        app:layout_constraintTop_toBottomOf="@id/ReviewItemOption2"
+        android:includeFontPadding="false"/>
+
+    <!-- 리뷰 구분바 -->
+    <ImageView
+        android:id="@+id/ItemDetailDeliveryDivideBar2"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ReviewImage2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 세 번째 리뷰 -->
+    <!-- 리뷰 작성자 -->
+    <TextView
+        android:id="@+id/ReviewWriter3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="유윤종"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar2"
+        android:includeFontPadding="false" />
+
+    <!-- 리뷰 작성자 옆 구분바 -->
+    <ImageView
+        android:id="@+id/ReviewWriterDivide3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_review_divide"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewWriter3"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar2"/>
+
+    <!-- 리뷰 별 svg -->
+    <ImageView
+        android:id="@+id/StarIcon3"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:src="@drawable/ic_star"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/ReviewWriterDivide3"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar2"/>
+
+    <!-- 별 옆 평점 텍스트 -->
+    <TextView
+        android:id="@+id/StarRatingText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.0"
+        android:textColor="#8A8A8E"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/StarIcon3"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar2"
+        android:includeFontPadding="false"/>
+
+    <!-- 리뷰 작성 날짜 -->
+    <TextView
+        android:id="@+id/ReviewCreatedText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2024.08.28"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:includeFontPadding="false"/>
+
+    <!-- 옵션 -->
+    <TextView
+        android:id="@+id/ReviewItemOption3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="옵션"
+        android:textColor="#585858"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter3"
+        android:includeFontPadding="false" />
+
+    <!-- 옵션 옆 구분바 -->
+    <ImageView
+        android:id="@+id/ReviewItemOptionDivide3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_review_divide"
+        android:layout_marginTop="19dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewItemOption3"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter3"/>
+
+    <!-- 리뷰 상품 옵션 -->
+    <TextView
+        android:id="@+id/ReviewItemOptionText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="참치맛"
+        android:textColor="#585858"
+        android:textSize="12sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewItemOptionDivide3"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter3"
+        android:includeFontPadding="false" />
+
+    <!-- 리뷰 글 -->
+    <TextView
+        android:id="@+id/ReviewText3"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:text="우리집 주인님이 제일 좋아하는 간식입니다!!! 배송 빨라서 좋아요"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ReviewItemOption3"
+        android:includeFontPadding="false"/>
+
+    <!-- 리뷰 구분바 -->
+    <ImageView
+        android:id="@+id/ItemDetailDeliveryDivideBar3"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ReviewText3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 네 번째 리뷰 -->
+    <!-- 리뷰 작성자 -->
+    <TextView
+        android:id="@+id/ReviewWriter4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="유이설"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar3"
+        android:includeFontPadding="false" />
+
+    <!-- 리뷰 작성자 옆 구분바 -->
+    <ImageView
+        android:id="@+id/ReviewWriterDivide4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_review_divide"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewWriter4"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar3"/>
+
+    <!-- 리뷰 별 svg -->
+    <ImageView
+        android:id="@+id/StarIcon4"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:src="@drawable/ic_star"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/ReviewWriterDivide4"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar3"/>
+
+    <!-- 별 옆 평점 텍스트 -->
+    <TextView
+        android:id="@+id/StarRatingText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.0"
+        android:textColor="#8A8A8E"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/StarIcon4"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar3"
+        android:includeFontPadding="false"/>
+
+    <!-- 리뷰 작성 날짜 -->
+    <TextView
+        android:id="@+id/ReviewCreatedText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2024.08.24"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:includeFontPadding="false"/>
+
+    <!-- 리뷰 이미지 -->
+    <ImageView
+        android:id="@+id/ReviewImage3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/image_review_3"
+        android:background="@drawable/rounded_image"
+        android:clipToOutline="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter4" />
+
+    <!-- 옵션 -->
+    <TextView
+        android:id="@+id/ReviewItemOption4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="옵션"
+        android:textColor="#585858"
+        android:textSize="12sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewImage3"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter4"
+        android:includeFontPadding="false" />
+
+    <!-- 옵션 옆 구분바 -->
+    <ImageView
+        android:id="@+id/ReviewItemOptionDivide4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_review_divide"
+        android:layout_marginTop="19dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewItemOption4"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter4"/>
+
+    <!-- 리뷰 상품 옵션 -->
+    <TextView
+        android:id="@+id/ReviewItemOptionText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="참치맛"
+        android:textColor="#585858"
+        android:textSize="12sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewItemOptionDivide4"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter4"
+        android:includeFontPadding="false" />
+
+    <!-- 리뷰 글 -->
+    <TextView
+        android:id="@+id/ReviewText4"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:text="항상 시키는데 우리집 고냥이가 잘 먹음.  안 주면 냥냥 울어요"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewImage3"
+        app:layout_constraintTop_toBottomOf="@id/ReviewItemOption4"
+        android:includeFontPadding="false"/>
+
+    <!-- 리뷰 구분바 -->
+    <ImageView
+        android:id="@+id/ItemDetailDeliveryDivideBar4"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ReviewImage3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 다섯 번째 리뷰 -->
+    <!-- 리뷰 작성자 -->
+    <TextView
+        android:id="@+id/ReviewWriter5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="홍길동"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar4"
+        android:includeFontPadding="false" />
+
+    <!-- 리뷰 작성자 옆 구분바 -->
+    <ImageView
+        android:id="@+id/ReviewWriterDivide5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_review_divide"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewWriter5"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar4"/>
+
+    <!-- 리뷰 별 svg -->
+    <ImageView
+        android:id="@+id/StarIcon5"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:src="@drawable/ic_star"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/ReviewWriterDivide5"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar4"/>
+
+    <!-- 별 옆 평점 텍스트 -->
+    <TextView
+        android:id="@+id/StarRatingText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.0"
+        android:textColor="#8A8A8E"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/StarIcon5"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar4"
+        android:includeFontPadding="false"/>
+
+    <!-- 리뷰 작성 날짜 -->
+    <TextView
+        android:id="@+id/ReviewCreatedText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2024.08.20"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ItemDetailDeliveryDivideBar4"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:includeFontPadding="false"/>
+
+    <!-- 옵션 -->
+    <TextView
+        android:id="@+id/ReviewItemOption5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="옵션"
+        android:textColor="#585858"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter5"
+        android:includeFontPadding="false" />
+
+    <!-- 옵션 옆 구분바 -->
+    <ImageView
+        android:id="@+id/ReviewItemOptionDivide5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_review_divide"
+        android:layout_marginTop="19dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewItemOption5"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter5"/>
+
+    <!-- 리뷰 상품 옵션 -->
+    <TextView
+        android:id="@+id/ReviewItemOptionText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="참치맛"
+        android:textColor="#585858"
+        android:textSize="12sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/ReviewItemOptionDivide5"
+        app:layout_constraintTop_toBottomOf="@id/ReviewWriter5"
+        android:includeFontPadding="false" />
+
+    <!-- 리뷰 글 -->
+    <TextView
+        android:id="@+id/ReviewText5"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:text="배송 빨라서 좋아요. 상태 좋고 보관하기도 편해서 항상 주문하고 있어요."
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ReviewItemOption5"
+        android:includeFontPadding="false"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 메인 화면 -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="?attr/actionBarSize"
+            tools:context=".MainActivity">
+
+            <!-- 메인 로고 -->
+            <TextView
+                android:id="@+id/MainLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/laundrygothic"
+                android:text="에펫타운"
+                android:textColor="@color/orange"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- 왼쪽 캘린더 아이콘 -->
+            <ImageView
+                android:id="@+id/CalendarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/calendar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/MainLogo" />
+
+            <!-- 오른쪽 카트 아이콘 -->
+            <ImageView
+                android:id="@+id/CartIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/cart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/MainLogo" />
+
+            <!-- 카트 아이콘 왼쪽에 위치한 알림 아이콘 -->
+            <ImageView
+                android:id="@+id/ReminderIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/reminder"
+                app:layout_constraintEnd_toStartOf="@id/CartIcon"
+                app:layout_constraintTop_toTopOf="@id/MainLogo" />
+
+            <!-- 검색창 (사각형 View) -->
+            <View
+                android:id="@+id/SearchBar"
+                android:layout_width="375dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/search_rectangle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MainLogo" />
+
+            <!-- Search 아이콘을 searchBar 위에 겹치게 배치 -->
+            <ImageView
+                android:id="@+id/SearchIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/search"
+                app:layout_constraintBottom_toBottomOf="@id/SearchBar"
+                app:layout_constraintEnd_toEndOf="@id/SearchBar"
+                app:layout_constraintTop_toTopOf="@id/SearchBar" />
+
+            <!-- 네모 바를 SearchIcon과 같은 줄에 배치 -->
+            <View
+                android:id="@+id/SearchDivideBar"
+                android:layout_width="2dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/search_divide_icon"
+                app:layout_constraintBottom_toBottomOf="@id/SearchBar"
+                app:layout_constraintEnd_toStartOf="@id/SearchIcon"
+                app:layout_constraintTop_toTopOf="@id/SearchBar" />
+
+            <!-- 검색어 입력 텍스트를 searchBar 위에 겹치게 배치 -->
+            <TextView
+                android:id="@+id/SearchText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="검색어 입력"
+                android:textColor="#8A8A8E"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/SearchBar"
+                app:layout_constraintStart_toStartOf="@id/SearchBar"
+                app:layout_constraintTop_toTopOf="@id/SearchBar" />
+
+            <!-- 배너 이미지 추가 -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/BannerImg"
+                android:layout_width="411dp"
+                android:layout_height="180dp"
+                app:layout_constraintTop_toBottomOf="@id/SearchBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp" />
+
+            <!-- 배너 순서를 표시할 사각형 -->
+            <View
+                android:id="@+id/BannerRectangle"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:background="@drawable/banner_rectangle"
+                app:layout_constraintBottom_toBottomOf="@id/BannerImg"
+                app:layout_constraintEnd_toEndOf="@id/BannerImg"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="20dp" />
+
+            <!-- 배너 순서를 표시하는 텍스트 -->
+            <TextView
+                android:id="@+id/BannerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:fontFamily="@font/notosanskr_medium"
+                android:text="1 / 4"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/BannerRectangle"
+                app:layout_constraintTop_toTopOf="@id/BannerRectangle"
+                app:layout_constraintEnd_toEndOf="@id/BannerRectangle"
+                app:layout_constraintStart_toStartOf="@id/BannerRectangle" />
+
+            <!-- 배너 이미지 하단에 33dp 간격을 두고 SVG 아이콘을 정렬 -->
+            <LinearLayout
+                android:id="@+id/CategoryGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/BannerImg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- 할인 혜택 -->
+                <LinearLayout
+                    android:id="@+id/CategoryDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/category_1" /> <!-- SVG 아이콘 파일 -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="할인 혜택"
+                        android:textSize="10sp"
+                        android:textColor="#242628"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+
+                <!-- 사료 -->
+                <LinearLayout
+                    android:id="@+id/CategoryFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:src="@drawable/category_2" /> <!-- SVG 아이콘 파일 -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="사료"
+                        android:textSize="10sp"
+                        android:textColor="#242628"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+
+                <!-- 간식 -->
+                <LinearLayout
+                    android:id="@+id/CategorySnack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:src="@drawable/category_3" /> <!-- SVG 아이콘 파일 -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="간식"
+                        android:textSize="10sp"
+                        android:textColor="#242628"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+
+                <!-- 용품 -->
+                <LinearLayout
+                    android:id="@+id/CategoryItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:src="@drawable/category_4" /> <!-- SVG 아이콘 파일 -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="용품"
+                        android:textSize="10sp"
+                        android:textColor="#242628"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+
+                <!-- 더보기 -->
+                <LinearLayout
+                    android:id="@+id/CategoryPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:src="@drawable/category_5" /> <!-- SVG 아이콘 파일 -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="더보기"
+                        android:textSize="10sp"
+                        android:textColor="#242628"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 유저 추천 상품 -->
+            <TextView
+                android:id="@+id/UserRecommendedItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="20dp"
+                android:text="오지현님을 위한 추천 상품"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/CategoryGroup"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- 유저 추천 상품 리스트 -->
+            <include
+                android:id="@+id/UserRecommendedItemsList"
+                layout="@layout/user_recommended_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/UserRecommendedItems"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- 유저 추천 상품 아래 구분바 -->
+            <View
+                android:id="@+id/DivideRectangleBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:background="@drawable/rectangle_bar"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/UserRecommendedItemsList" />
+
+            <!-- 반려동물 추천 상품 -->
+            <TextView
+                android:id="@+id/PetRecommendedItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:layout_marginStart="20dp"
+                android:text="뽀삐를 위한 추천 상품"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/DivideRectangleBar1"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- 반려동물 추천 상품 리스트 -->
+            <include
+                android:id="@+id/PetRecommendedItemsList"
+                layout="@layout/pet_recommended_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/PetRecommendedItems"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- 반려동물 추천 상품 아래 구분바 -->
+            <View
+                android:id="@+id/DivideRectangleBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:background="@drawable/rectangle_bar"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/PetRecommendedItemsList" />
+
+            <!-- HOT 신상 -->
+            <TextView
+                android:id="@+id/HotNewItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:layout_marginStart="20dp"
+                android:text="HOT 신상"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/DivideRectangleBar2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!--  HOT 신상 리스트 -->
+            <include
+                android:id="@+id/HotNewItemsList"
+                layout="@layout/hot_new_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@id/HotNewItems"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+        <!-- 탭바 배경 하얀색 사각형 -->
+        <ImageView
+            android:id="@+id/MainTapFixBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/tap_bg_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- 탭바 홈 배경 하얀색 사각형 -->
+        <ImageView
+            android:id="@+id/HomeRectangleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/tap_regtangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- 홈 아이콘 -->
+        <ImageView
+            android:id="@+id/NowTapHomeIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_tap_home"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            app:layout_constraintStart_toStartOf="@id/HomeRectangleBar"
+            app:layout_constraintTop_toTopOf="@id/HomeRectangleBar" />
+
+        <!-- 홈 텍스트 -->
+        <TextView
+            android:id="@+id/NowTapHomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="홈"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@id/HomeRectangleBar"
+            app:layout_constraintTop_toBottomOf="@id/NowTapHomeIcon" />
+
+        <!-- 탭바 커뮤니티 배경 하얀색 사각형 -->
+        <ImageView
+            android:id="@+id/CommunityRectangleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/tap_regtangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/HomeRectangleBar" />
+
+        <!-- 커뮤니티 아이콘 -->
+        <ImageView
+            android:id="@+id/TapCommunityIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_community"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintStart_toStartOf="@id/CommunityRectangleBar"
+            app:layout_constraintTop_toTopOf="@id/CommunityRectangleBar" />
+
+        <!-- 커뮤니티 텍스트 -->
+        <TextView
+            android:id="@+id/TapCommunityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="커뮤니티"
+            android:textSize="10sp"
+            android:textColor="#B9BEC1"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@id/CommunityRectangleBar"
+            app:layout_constraintTop_toBottomOf="@id/TapCommunityIcon" />
+
+        <!-- 탭바 카테고리 배경 하얀색 사각형 -->
+        <ImageView
+            android:id="@+id/CategoryRectangleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/tap_regtangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/CommunityRectangleBar" />
+
+        <!-- 카테고리 아이콘 -->
+        <ImageView
+            android:id="@+id/TapCategoryIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_category"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/CategoryRectangleBar"
+            app:layout_constraintTop_toTopOf="@id/CategoryRectangleBar" />
+
+        <!-- 카테고리 텍스트 -->
+        <TextView
+            android:id="@+id/TapCategoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카테고리"
+            android:textSize="10sp"
+            android:textColor="#B9BEC1"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="@id/CategoryRectangleBar"
+            app:layout_constraintTop_toBottomOf="@id/TapCategoryIcon" />
+
+        <!-- 탭바 병원 배경 하얀색 사각형 -->
+        <ImageView
+            android:id="@+id/HospitalRectangleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/tap_regtangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/CategoryRectangleBar" />
+
+        <!-- 병원 아이콘 -->
+        <ImageView
+            android:id="@+id/TapHostpitalIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_hospital"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintStart_toStartOf="@id/HospitalRectangleBar"
+            app:layout_constraintTop_toTopOf="@id/HospitalRectangleBar" />
+
+        <!-- 병원 텍스트 -->
+        <TextView
+            android:id="@+id/TapHostpitalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="병원"
+            android:textSize="10sp"
+            android:textColor="#B9BEC1"
+            android:layout_marginStart="33.5dp"
+            android:layout_marginTop="3.5dp"
+            app:layout_constraintStart_toStartOf="@id/HospitalRectangleBar"
+            app:layout_constraintTop_toBottomOf="@id/TapHostpitalIcon" />
+
+        <!-- 탭바 내 정보 배경 하얀색 사각형 -->
+        <ImageView
+            android:id="@+id/MypageRectangleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/tap_regtangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/HospitalRectangleBar" />
+
+        <!-- 내 정보 아이콘 -->
+        <ImageView
+            android:id="@+id/TapMypageIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mypage"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintStart_toStartOf="@id/MypageRectangleBar"
+            app:layout_constraintTop_toTopOf="@id/MypageRectangleBar" />
+
+        <!-- 내 정보 텍스트 -->
+        <TextView
+            android:id="@+id/TapMypageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내 정보"
+            android:textSize="10sp"
+            android:textColor="#B9BEC1"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="2.5dp"
+            app:layout_constraintStart_toStartOf="@id/MypageRectangleBar"
+            app:layout_constraintTop_toBottomOf="@id/TapMypageIcon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
