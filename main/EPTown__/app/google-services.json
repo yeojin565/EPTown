@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "543146714189",
+    "project_id": "eptown-7f210",
+    "storage_bucket": "eptown-7f210.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543146714189:android:dce9f18b32efb001cc6804",
+        "android_client_info": {
+          "package_name": "com.example.eptown_"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGIQuH1E_qfLqVNWdV7nubZmqCoXPel5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
